@@ -110,7 +110,7 @@ const Hero = () => {
               maxW={"200px"}
               borderRadius={"full"}
               height={"8px"}
-              colorScheme={HP >= 40 ? "orange" : HP >= 20 ? "red" : "teal"}
+              colorScheme={HP <= 40 ? "orange" : HP <= 20 ? "red" : "teal"}
               value={HP}
               mb={2}
             ></Progress>

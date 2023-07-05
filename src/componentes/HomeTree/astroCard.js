@@ -34,7 +34,7 @@ function AstroCard({ nome, icone, planeta, cor, descricao }) {
 
           <ModalCloseButton />
           <ModalBody>
-            <Text p={6}>{descricao}</Text>
+            <Text p={4}>{descricao}</Text>
           </ModalBody>
 
           <ModalFooter>
