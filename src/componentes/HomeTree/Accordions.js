@@ -9,6 +9,7 @@ import {
   Grid,
   Heading,
   Icon,
+  Center
 } from "@chakra-ui/react";
 
 import { useEffect, useRef } from "react";
@@ -71,8 +72,10 @@ function Main() {
             </AccordionButton>
           </h2>
           <AccordionPanel>
+            <Center>
             {/* Habilidades > GRID */}
             <GridHabilidades />
+            </Center>
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
@@ -94,7 +97,7 @@ function Main() {
             <Grid
               maxWidth="100%"
               templateColumns="repeat(3, 1fr)"
-              gap={5}
+              gap={2}
               autoRows="minmax(150px, auto)"
               ref={gridRef}
             >

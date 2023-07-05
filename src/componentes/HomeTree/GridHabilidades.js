@@ -45,7 +45,7 @@ function GridHabilidades() {
       <Grid
         maxWidth="90%"
         templateColumns="repeat(3, 1fr)"
-        gap={4}
+        gap={3}
         autoRows="minmax(120px, auto)"
       >
         <IconHabilidade
@@ -122,9 +122,9 @@ function GridHabilidades() {
           descricao={"Capacidade para programar"}
         />
         <IconHabilidade
-          nome={"Senso Estético"}
+          nome={"Estética"}
           icone={GI.GiEyeTarget}
-          progresso={80}
+          progresso={60}
           descricao={"Apuração de senso estético"}
         />
         <IconHabilidade
@@ -139,17 +139,23 @@ function GridHabilidades() {
           progresso={70}
           descricao={"Conhecimento sobre cinema"}
         />
-               <IconHabilidade
+        <IconHabilidade
           nome={"Animes"}
           icone={GI.GiNinjaHeroicStance}
           progresso={70}
           descricao={"Conhecimento sobre animes"}
         />
-                       <IconHabilidade
+        <IconHabilidade
           nome={"Música"}
           icone={GI.GiMusicalNotes}
           progresso={70}
           descricao={"Conhecimento sobre música"}
+        />
+                <IconHabilidade
+          nome={"Juegos"}
+          icone={GI.GiConsoleController}
+          progresso={96}
+          descricao={"Conhecimento sobre joguitos"}
         />
       </Grid>
     </Flex>
