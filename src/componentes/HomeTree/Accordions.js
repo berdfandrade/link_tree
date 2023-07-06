@@ -9,7 +9,7 @@ import {
   Grid,
   Heading,
   Icon,
-  Center
+  Center,
 } from "@chakra-ui/react";
 
 import { useEffect, useRef } from "react";
@@ -72,9 +72,14 @@ function Main() {
             </AccordionButton>
           </h2>
           <AccordionPanel>
+            <Text>
+              <Text as={"b"}>Habilidades</Text> que Bernardo pode usar no campo de
+              batalha
+            </Text>
             <Center>
-            {/* Habilidades > GRID */}
-            <GridHabilidades />
+              {/* Habilidades > GRID */}
+
+              <GridHabilidades />
             </Center>
           </AccordionPanel>
         </AccordionItem>
@@ -172,10 +177,11 @@ function Main() {
             </AccordionButton>
           </h2>
           <AccordionPanel>
-            <Heading mt={4} mb={3}>
+            <Text as={"b"} fontSize={20} mt={8}>
               Proletário - Programador
-            </Heading>
+            </Text>
             <Grid
+              mt={8}
               mb={5}
               maxWidth="100%"
               templateColumns="repeat(2, 1fr)"

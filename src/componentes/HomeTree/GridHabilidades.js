@@ -44,7 +44,7 @@ function GridHabilidades() {
     <Flex direction="column" align="center" mt={4}>
       <Grid
         maxWidth="90%"
-        templateColumns="repeat(3, 1fr)"
+        templateColumns="repeat(2, 1fr)"
         gap={3}
         autoRows="minmax(120px, auto)"
       >
@@ -74,14 +74,14 @@ function GridHabilidades() {
         />
         <IconHabilidade
           nome={"Festas"}
-          descricao={"Proporcionar o entretenimento!"}
+          descricao={"Disposição para festas"}
           icone={GI.GiPartyHat}
           progresso={70}
         />
         <IconHabilidade
           nome={"Corrida"}
           icone={GI.GiRunningShoe}
-          progresso={40}
+          progresso={70}
           descricao={"Capacidade de correr"}
         />
 
@@ -106,7 +106,7 @@ function GridHabilidades() {
         <IconHabilidade
           nome={"Memória"}
           icone={BI.BiMemoryCard}
-          progresso={50}
+          progresso={40}
           descricao={"Capacidade de lembrar das coisas"}
         />
         <IconHabilidade
@@ -151,11 +151,35 @@ function GridHabilidades() {
           progresso={70}
           descricao={"Conhecimento sobre música"}
         />
-                <IconHabilidade
+        <IconHabilidade
           nome={"Juegos"}
           icone={GI.GiConsoleController}
           progresso={96}
           descricao={"Conhecimento sobre joguitos"}
+        />
+        <IconHabilidade
+          nome={"Café"}
+          icone={GI.GiCoffeeCup}
+          progresso={100}
+          descricao={"Consumo de Café"}
+        />
+        <IconHabilidade
+          nome={"Bebidas"}
+          icone={GI.GiDrinking}
+          progresso={60}
+          descricao={"Consumo de álcool"}
+        />
+        <IconHabilidade
+          nome={"Cigarro"}
+          icone={GI.GiCigarette}
+          progresso={1}
+          descricao={"Consumo de cigarro"}
+        />
+        <IconHabilidade
+          nome={"Ironia"}
+          icone={GI.GiCardJoker}
+          progresso={70}
+          descricao={"Uso de ironia"}
         />
       </Grid>
     </Flex>

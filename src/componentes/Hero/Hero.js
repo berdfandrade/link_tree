@@ -24,6 +24,8 @@ import PixelBenny from "../../assets/pixelBennySemFundo.png";
 import { ToggleDarkMode } from "../botaoDarkMode/botaoDarkMode";
 import aura from "../../assets/de6pp7v-7ec4ca37-05a0-425a-adc3-23c4bea0d1f2.gif";
 import aura2 from "../../assets/dc1jmvt-18441e04-12ef-4595-8505-5cc8ade3034e.gif";
+import aura3 from "../../assets/deza8e9-b79fc074-2c89-4214-b0cb-73152b904149.gif" // Campeã
+import aura5 from "../../assets/df7x0n1-12b200af-d15b-44dd-816a-5c7576b8cde6.gif"
 import calcularPorcentagemDiaPassado from "./porcentagemDia";
 
 const Hero = () => {
@@ -48,7 +50,7 @@ const Hero = () => {
     const element = elementRef.current;
     anime({
       targets: element,
-      translateY: [-20, -6], // Define a animação de subida e descida
+      translateY: [-32, -15], // Define a animação de subida e descida
       loop: true, // Faz a animação repetir infinitamente
       direction: "alternate",
       easing: "easeInOutQuad", // Define a curva de aceleração
@@ -57,23 +59,18 @@ const Hero = () => {
   }, []);
 
   return (
-    <Box py={7} mb={1} textAlign="center">
+    <Box py={8} mb={1} textAlign="center">
       <Heading as="h3" mb={1}>
         Bernardo Andrade
-  
       </Heading>
-
-      {/* <Text as="sub">
-        <TerminalComponent />
-      </Text> */}
-
+ <ToggleDarkMode/>
       <Center mb={2}>
-        <Box position="relative" width="200px" height="200px">
-        <ToggleDarkMode translateX={90}/>
+        <Box position="relative" width="170px" height="170px">
+       
           <Box
+            top="20"
+            left="10"
             position="absolute"
-            top="28"
-            left="12"
             width="100%"
             height="100%"
           >
@@ -81,21 +78,21 @@ const Hero = () => {
               src={PixelBenny}
               ref={elementRef}
               alt="Avatar"
-              style={{ width: "120px", height: "120px" }}
+              style={{ width: "100px", height: "100px" }}
             />
           </Box>
           <img
-            src={aura}
+            src={aura3}
             alt="Aura Animation"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "120%", height: "120%" }}
           />
         </Box>
-        <Text p={2} fontSize="md" mt={4}>
+        <Text fontSize="md" mt={4}>
           <Text as="b">stats: </Text> <br />
-          <Divider maxW={"130px"} mb={2} />
+          {/* <Divider maxW={"120px"} mb={2} /> */}
           <Text ml={1}>
             Lvl.{" "}
-            <Text fontSize="30" mr={3} as="b">
+            <Text fontSize="30" mr={1} as="b">
               27
             </Text>
             Class:
