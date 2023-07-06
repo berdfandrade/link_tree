@@ -173,7 +173,7 @@ function Main() {
           </h2>
           <AccordionPanel>
             <Heading mt={4} mb={3}>
-              Proleátario - Programador
+              Proletário - Programador
             </Heading>
             <Grid
               mb={5}
