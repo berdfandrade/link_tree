@@ -18,34 +18,44 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+} from '@chakra-ui/react'
+
 function AstroCard({ nome, icone, planeta, cor, descricao }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{nome}</ModalHeader>
-          <Center>
-            <Icon ml={6} mt={2} boxSize={10} as={planeta} />
-            <Icon boxSize={20} as={icone} />
-          </Center>
 
-          <ModalCloseButton />
-          <ModalBody>
-            <Text p={4}>{descricao}</Text>
-          </ModalBody>
-
-          <ModalFooter>
-            <Button variant={"ghost"} onClick={onClose}>
-              Fechar
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+      <Drawer colorScheme={cor} size={"md"}onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader fontSize={25}>{nome}</DrawerHeader>
+          <Center flexDirection={"column"}>
+          <Icon boxSize={"130px"} as={icone}/>
+          
+           </Center>
+          <DrawerBody>
+            <p justifyContent={"center"}>
+             {descricao}
+            </p>
+            <Center>
+            <Icon mt={10} boxSize={"50px"} as={planeta} />
+            </Center>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
 
       <Tag
+        variant={"outline"}
         p={4}
         onClick={onOpen}
         cursor={"pointer"}
@@ -54,7 +64,7 @@ function AstroCard({ nome, icone, planeta, cor, descricao }) {
       >
         <Flex flexDirection={"column"}>
           <Icon boxSize={20} as={icone} />
-          <Icon ml={6} mt={2} boxSize={"30px"} as={planeta} />
+          
           <Text ml={1} mt={4}>
             {nome}
           </Text>

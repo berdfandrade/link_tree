@@ -112,7 +112,10 @@ function Main() {
                 nome={"Capricórnio"}
                 icone={TB.TbZodiacCapricorn}
                 descricao={
-                  "Nascido com o sol em Capricórnio, Bernardo é conhecido por sua determinação inabalável e ambição incansável. Ele é um estrategista habilidoso, sempre avaliando cuidadosamente suas opções antes de agir. Sua natureza prática e pragmática faz com que ele seja um líder confiável e eficiente."
+                  <Text mt={3}>
+                  Nascido com o sol em Capricórnio, Bernardo é conhecido por sua determinação inabalável e ambição incansável. Ele é um estrategista habilidoso, sempre avaliando cuidadosamente suas opções antes de agir. Sua natureza prática e pragmática faz com que ele seja um líder confiável e eficiente.<br/><br/>
+                  O tipo Capricórnio representa aqueles que são práticos, disciplinados e ambiciosos. São indivíduos que possuem uma mentalidade estratégica e estão sempre em busca do sucesso e do reconhecimento.
+                  </Text>
                 }
               />
               <AstroCard
@@ -121,7 +124,11 @@ function Main() {
                 nome={"Escorpião"}
                 icone={TB.TbZodiacScorpio}
                 descricao={
-                  "Sua natureza prática e pragmática é complementada pela influência da lua em Escorpião, que traz uma aura misteriosa e magnética a Bernardo. Ele possui uma profundidade emocional significativa e uma capacidade aguçada de perceber as motivações e intenções das pessoas ao seu redor."
+                  <Text mt={3}>
+                  Sua natureza prática e pragmática é complementada pela influência da lua em Escorpião, que traz uma aura misteriosa e magnética a Bernardo. Ele possui uma profundidade emocional significativa e uma capacidade aguçada de perceber as motivações e intenções das pessoas ao seu redor.<br/><br/>
+                  O tipo Escorpião representa aqueles que são intensos, misteriosos e determinados. São indivíduos passionais e astutos, com uma natureza enigmática que os torna difíceis de serem decifrados.
+                  
+                  </Text>
                 }
               />
               <AstroCard
@@ -130,7 +137,10 @@ function Main() {
                 nome={<Text ml={4}>Peixes</Text>}
                 icone={TB.TbZodiacPisces}
                 descricao={
-                  "Com o ascendente em Peixes, Bernardo tem uma sensibilidade aguçada e uma conexão profunda com o mundo ao seu redor. Ele é um ser empático, capaz de compreender e compartilhar as emoções dos outros. Sua abordagem suave e pacífica faz com que ele seja um aliado confiável e um defensor dos mais fracos."
+                  <Text mt={3}>
+                  Com o ascendente em Peixes, Bernardo tem uma sensibilidade aguçada e uma conexão profunda com o mundo ao seu redor. Ele é um ser empático, capaz de compreender e compartilhar as emoções dos outros. Sua abordagem suave e pacífica faz com que ele seja um aliado confiável e um defensor dos mais fracos.<br/><br/>
+                  O tipo Peixes representa aqueles que são intuitivos, sensíveis e compassivos. São indivíduos sonhadores e criativos, com uma conexão profunda com o mundo emocional e espiritual.
+                  </Text>
                 }
               />
             </Grid>

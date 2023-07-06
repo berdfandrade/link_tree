@@ -22,10 +22,7 @@ import anime from "animejs";
 import TerminalComponent from "./escreverNoTerminal";
 import PixelBenny from "../../assets/pixelBennySemFundo.png";
 import { ToggleDarkMode } from "../botaoDarkMode/botaoDarkMode";
-import aura from "../../assets/de6pp7v-7ec4ca37-05a0-425a-adc3-23c4bea0d1f2.gif";
-import aura2 from "../../assets/dc1jmvt-18441e04-12ef-4595-8505-5cc8ade3034e.gif";
-import aura3 from "../../assets/deza8e9-b79fc074-2c89-4214-b0cb-73152b904149.gif" // Campeã
-import aura5 from "../../assets/df7x0n1-12b200af-d15b-44dd-816a-5c7576b8cde6.gif"
+import aura from "../../assets/deza8e9-b79fc074-2c89-4214-b0cb-73152b904149.gif" // Campeã
 import calcularPorcentagemDiaPassado from "./porcentagemDia";
 
 const Hero = () => {
@@ -82,7 +79,7 @@ const Hero = () => {
             />
           </Box>
           <img
-            src={aura3}
+            src={aura}
             alt="Aura Animation"
             style={{ width: "120%", height: "120%" }}
           />
@@ -144,13 +141,13 @@ const Hero = () => {
             74kg
           </Text>
           <br />
-          <Tag colorScheme="orange" borderRadius="full" mt={1} ml={3} mr={2}>
+          <Tag variant={"subtle"} colorScheme="orange" borderRadius="full" mt={1} ml={3} mr={2}>
             Terra
             <Icon boxSize={"16px"} ml={1} as={TB.TbZodiacCapricorn} />
           </Tag>
-          <Tag mt={1} borderRadius="full" colorScheme="blue">
+          <Tag  mt={1} borderRadius="full" colorScheme="blue">
             Água
-            <Icon boxSize={"14px"} ml={1} as={TB.TbZodiacPisces} />
+            <Icon  boxSize={"14px"} ml={1} as={TB.TbZodiacPisces} />
           </Tag>
           <br />
         </Text>
