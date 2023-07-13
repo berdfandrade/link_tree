@@ -10,40 +10,24 @@ import {
   Heading,
   Icon,
   Center,
+  Flex,
+  Button,
 } from "@chakra-ui/react";
 
-import { useEffect, useRef } from "react";
+// Imports
 import AstroCard from "./astroCard";
-import anime from "animejs";
 import GridHabilidades from "./GridHabilidades";
 import * as TB from "react-icons/tb";
 import * as GI from "react-icons/gi";
 import { BsMoonStars, BsSunFill } from "react-icons/bs";
 import { LuStars } from "react-icons/lu";
+import * as FA from "react-icons/fa";
+import * as IO from "react-icons/io";
 
 function Main() {
-  const gridRef = useRef(null);
-
-  useEffect(() => {
-    const gridElement = gridRef.current;
-
-    const animateGrid = () => {
-      anime({
-        targets: gridElement.querySelectorAll(".grid-item"),
-        translateX: [-500, 0],
-        opacity: [0, 1],
-        delay: anime.stagger(100),
-        easing: "easeOutExpo",
-        duration: 1000,
-      });
-    };
-
-    animateGrid();
-  }, []);
-
   return (
     <Box>
-      <Accordion defaultIndex={[0]} allowMultiple>
+      <Accordion allowMultiple>
         <AccordionItem>
           <h2>
             <AccordionButton>
@@ -54,11 +38,18 @@ function Main() {
             </AccordionButton>
           </h2>
           <AccordionPanel p={6} maxW={"90%"}>
-            <Text as="b">Bernardo</Text> é um programador de 27 anos. <br />
-            <br />É formado em Cinema e Audiovisual. Gosta de artes, de coisas
-            inteligentes, de comédia, de joguitos, de criar coisas, de
-            programar, de ler, de jogar Guitar Hero, de correr, de música, de
-            ouvir as pessoas, de anime, de futebol, de beber e pô, é isso.
+            <Text fontSize="15" as="b">
+              Bernardo
+            </Text>{" "}
+            | programador | 27 anos. <br />
+            <br />
+            <Text as="i">
+              {" "}
+              É formado em Cinema e Audiovisual. Gosta de artes, de coisas
+              inteligentes, de comédia, de joguitos, de criar coisas, de
+              programar, de ler, de jogar Guitar Hero, de correr, de música, de
+              ouvir as pessoas, de anime, de futebol, de beber e pô, é isso.
+            </Text>
           </AccordionPanel>
         </AccordionItem>
 
@@ -73,8 +64,8 @@ function Main() {
           </h2>
           <AccordionPanel>
             <Text>
-              <Text as={"b"}>Habilidades</Text> que Bernardo pode usar no campo de
-              batalha
+              <Text as={"b"}>Habilidades</Text> que Bernardo pode usar no campo
+              de batalha
             </Text>
             <Center>
               {/* Habilidades > GRID */}
@@ -104,7 +95,6 @@ function Main() {
               templateColumns="repeat(3, 1fr)"
               gap={2}
               autoRows="minmax(150px, auto)"
-              ref={gridRef}
             >
               <AstroCard
                 cor={"orange"}
@@ -113,8 +103,16 @@ function Main() {
                 icone={TB.TbZodiacCapricorn}
                 descricao={
                   <Text mt={3}>
-                  Nascido com o sol em Capricórnio, Bernardo é conhecido por sua determinação inabalável e ambição incansável. Ele é um estrategista habilidoso, sempre avaliando cuidadosamente suas opções antes de agir. Sua natureza prática e pragmática faz com que ele seja um líder confiável e eficiente.<br/><br/>
-                  O tipo Capricórnio representa aqueles que são práticos, disciplinados e ambiciosos. São indivíduos que possuem uma mentalidade estratégica e estão sempre em busca do sucesso e do reconhecimento.
+                    Nascido com o sol em Capricórnio, Bernardo é conhecido por
+                    sua determinação inabalável e ambição incansável. Ele é um
+                    estrategista habilidoso, sempre avaliando cuidadosamente
+                    suas opções antes de agir. Sua natureza prática e pragmática
+                    faz com que ele seja um líder confiável e eficiente.
+                    <br />
+                    <br />O tipo Capricórnio representa aqueles que são
+                    práticos, disciplinados e ambiciosos. São indivíduos que
+                    possuem uma mentalidade estratégica e estão sempre em busca
+                    do sucesso e do reconhecimento.
                   </Text>
                 }
               />
@@ -125,9 +123,16 @@ function Main() {
                 icone={TB.TbZodiacScorpio}
                 descricao={
                   <Text mt={3}>
-                  Sua natureza prática e pragmática é complementada pela influência da lua em Escorpião, que traz uma aura misteriosa e magnética a Bernardo. Ele possui uma profundidade emocional significativa e uma capacidade aguçada de perceber as motivações e intenções das pessoas ao seu redor.<br/><br/>
-                  O tipo Escorpião representa aqueles que são intensos, misteriosos e determinados. São indivíduos passionais e astutos, com uma natureza enigmática que os torna difíceis de serem decifrados.
-                  
+                    Sua natureza prática e pragmática é complementada pela
+                    influência da lua em Escorpião, que traz uma aura misteriosa
+                    e magnética a Bernardo. Ele possui uma profundidade
+                    emocional significativa e uma capacidade aguçada de perceber
+                    as motivações e intenções das pessoas ao seu redor.
+                    <br />
+                    <br />O tipo Escorpião representa aqueles que são intensos,
+                    misteriosos e determinados. São indivíduos passionais e
+                    astutos, com uma natureza enigmática que os torna difíceis
+                    de serem decifrados.
                   </Text>
                 }
               />
@@ -138,8 +143,17 @@ function Main() {
                 icone={TB.TbZodiacPisces}
                 descricao={
                   <Text mt={3}>
-                  Com o ascendente em Peixes, Bernardo tem uma sensibilidade aguçada e uma conexão profunda com o mundo ao seu redor. Ele é um ser empático, capaz de compreender e compartilhar as emoções dos outros. Sua abordagem suave e pacífica faz com que ele seja um aliado confiável e um defensor dos mais fracos.<br/><br/>
-                  O tipo Peixes representa aqueles que são intuitivos, sensíveis e compassivos. São indivíduos sonhadores e criativos, com uma conexão profunda com o mundo emocional e espiritual.
+                    Com o ascendente em Peixes, Bernardo tem uma sensibilidade
+                    aguçada e uma conexão profunda com o mundo ao seu redor. Ele
+                    é um ser empático, capaz de compreender e compartilhar as
+                    emoções dos outros. Sua abordagem suave e pacífica faz com
+                    que ele seja um aliado confiável e um defensor dos mais
+                    fracos.
+                    <br />
+                    <br />O tipo Peixes representa aqueles que são intuitivos,
+                    sensíveis e compassivos. São indivíduos sonhadores e
+                    criativos, com uma conexão profunda com o mundo emocional e
+                    espiritual.
                   </Text>
                 }
               />
@@ -197,7 +211,6 @@ function Main() {
               templateColumns="repeat(2, 1fr)"
               gap={2}
               autoRows="minmax(150px, auto)"
-              ref={gridRef}
             >
               <AstroCard
                 nome={"Proletário"}
@@ -257,7 +270,7 @@ function Main() {
           <h2>
             <AccordionButton>
               <Box as="b" fontSize={20} flex="1" textAlign="left">
-                <Icon as={GI.GiSatelliteCommunication} mr={2}></Icon>Comunicação
+                <Icon as={GI.GiTalk} mr={2}></Icon>Comunicação
               </Box>
               <AccordionIcon />
             </AccordionButton>
@@ -335,6 +348,128 @@ function Main() {
             </Box>
           </AccordionPanel>
         </AccordionItem>
+        <AccordionItem>
+          <h2>
+            <AccordionButton>
+              <Box as="b" fontSize={20} flex="1" textAlign="left">
+                <Icon as={GI.GiPerson} mr={2}></Icon>Físico
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel>
+            <Center>
+              <Grid
+                maxWidth="100%"
+                templateColumns="repeat(3, 1fr)"
+                gap={2}
+                flexDirection={"row"}
+              >
+                <Flex ml={"50%"} flexDirection="column">
+                  <Flex direction={"row"}>
+                    <Icon boxSize={5} mb={1} as={FA.FaRulerVertical}></Icon>
+                    <Text fontSize={"sm"}> 1,73m</Text>
+                  </Flex>
+                  <Flex direction={"row"}>
+                    <Icon boxSize={5} mb={1} as={FA.FaWeight}></Icon>
+                    <Text fontSize={"sm"} ml={1}>
+                      76kg
+                    </Text>
+                  </Flex>
+                  <Flex direction={"row"}>
+                    <Icon boxSize={5} mb={1} as={GI.GiBarefoot}></Icon>
+                    <Text fontSize={"sm"} ml={1}>
+                      41
+                    </Text>
+                  </Flex>
+                  <Flex direction={"row"}>
+                    <Icon boxSize={5} mb={1} as={GI.GiHand} />
+                    <Text ml={1} fontSize={"xs"}>
+                      Dest.
+                    </Text>
+                  </Flex>
+                </Flex>
+                <Icon boxSize={"110px"} ml={1} mb={1} as={IO.IoMdBody}></Icon>
+                <Flex flexDirection="column">
+                  <Flex direction={"row"}>
+                    <Icon boxSize={5} mb={1} as={GI.GiWaterDrop}></Icon>
+                    <Text fontSize={"sm"} ml={1}>
+                      70%
+                    </Text>
+                  </Flex>
+                  <Flex direction={"row"}>
+                    <Icon boxSize={5} mb={1} as={GI.GiFat}></Icon>
+                    <Text fontSize={"sm"} ml={1}>
+                      15%
+                    </Text>
+                  </Flex>
+                  <Flex direction={"row"}>
+                    <Icon boxSize={5} mb={1} as={GI.GiGhost}></Icon>
+                    <Text fontSize={"sm"} ml={1}>
+                      20%
+                    </Text>
+                  </Flex>
+                  <Flex direction={"row"}>
+                    <Icon boxSize={5} mb={1} as={GI.GiEarthCrack}></Icon>
+                    <Text fontSize={"sm"} ml={1}>
+                      20%
+                    </Text>
+                  </Flex>
+                </Flex>
+              </Grid>
+            </Center>
+            <Text mt={3}>
+              Bernardo é <Text as="b">ectomorfo</Text>, magro e com algum
+              músculo. Prefere atividades aeróbicas do que musculação. Gosta de
+              jogar futebol. Sua perna preferida é a direita, e possui poucas
+              habilidades com a perna esquerda. Bernardo é pouco flexível, é
+              destro e possui mais musculatura na parte inferior do corpo. Seus
+              cabelos são pretos e os olhos igualmente escuros, braços são finos
+              e com pouca musculatura
+            </Text>
+          </AccordionPanel>
+        </AccordionItem>
+        {/* <AccordionItem>
+          <h2>
+            <AccordionButton>
+              <Box as="b" fontSize={20} flex="1" textAlign="left">
+                <Icon as={TB.TbLink} mr={2}></Icon>Links Úteis
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel>
+            <Center flexDirection={"row"}>
+              <Button mt={6} p={3} bg={"black"} borderRadius={"full"} ml={4}>
+                <Icon color="white" boxSize={7} as={TB.TbKeyboard} />
+                <Text color="white" ml={2} mt={1} fontSize={"sm"}>
+                  Site Profissional
+                </Text>
+              </Button>
+
+              <Button
+                mt={6}
+                p={3}
+                colorScheme="telegram"
+                borderRadius={"full"}
+                ml={4}
+              >
+                <Icon color="white" boxSize={7} as={TB.TbBrandInstagram} />
+              </Button>
+
+              <Button
+                mt={6}
+                p={3}
+                colorScheme="whatsapp"
+                borderRadius={"full"}
+                ml={4}
+                isExternal
+              >
+                <Icon color="white" boxSize={7} as={TB.TbBrandSpotify} />
+              </Button>
+            </Center>
+          </AccordionPanel>
+        </AccordionItem> */}
       </Accordion>
     </Box>
   );

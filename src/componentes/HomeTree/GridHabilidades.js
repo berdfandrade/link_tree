@@ -152,10 +152,10 @@ function GridHabilidades() {
           descricao={"Conhecimento sobre música"}
         />
         <IconHabilidade
-          nome={"Juegos"}
-          icone={GI.GiConsoleController}
-          progresso={96}
-          descricao={"Conhecimento sobre joguitos"}
+          nome={"Futebol"}
+          icone={GI.GiSoccerBall}
+          progresso={30}
+          descricao={"Habilidade com a bola"}
         />
         <IconHabilidade
           nome={"Café"}

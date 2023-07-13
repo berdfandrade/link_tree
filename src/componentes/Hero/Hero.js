@@ -4,13 +4,12 @@ import {
   Heading,
   Text,
   Center,
-  Avatar,
-  Divider,
   Icon,
-
   Flex,
   Tag,
   Progress,
+  Link,
+  Button,
 } from "@chakra-ui/react";
 
 import * as GI from "react-icons/gi";
@@ -19,30 +18,28 @@ import * as TB from "react-icons/tb";
 
 import calcularPorcentagemCompletadaAno from "./porcentagemAno";
 import anime from "animejs";
-import TerminalComponent from "./escreverNoTerminal";
+
 import PixelBenny from "../../assets/pixelBennySemFundo.png";
 import { ToggleDarkMode } from "../botaoDarkMode/botaoDarkMode";
-import aura from "../../assets/deza8e9-b79fc074-2c89-4214-b0cb-73152b904149.gif" // Campeã
+import aura from "../../assets/deza8e9-b79fc074-2c89-4214-b0cb-73152b904149.gif"; // Campeã
 import calcularPorcentagemDiaPassado from "./porcentagemDia";
 
 const Hero = () => {
   const elementRef = useRef(null);
 
   const [porCentoAno, setPorCentoAno] = useState(0);
+  const [HP, setHp] = useState(0);
 
-  const [HP, setHp] = useState(0)
-
-  useEffect(() =>{
-    const HP = 100 - calcularPorcentagemDiaPassado()
-    setHp(HP)
-  },[])
+  useEffect(() => {
+    const HP = 120 - calcularPorcentagemDiaPassado();
+    setHp(HP);
+  }, []);
 
   useEffect(() => {
     const porcentagemCompletadaAno = calcularPorcentagemCompletadaAno();
     setPorCentoAno(porcentagemCompletadaAno);
   }, []);
 
-  
   useEffect(() => {
     const element = elementRef.current;
     anime({
@@ -60,10 +57,13 @@ const Hero = () => {
       <Heading as="h3" mb={1}>
         Bernardo Andrade
       </Heading>
- <ToggleDarkMode/>
+      <Center>
+        <Flex direction="row">
+          <ToggleDarkMode />
+        </Flex>
+      </Center>
       <Center mb={2}>
         <Box position="relative" width="170px" height="170px">
-       
           <Box
             top="20"
             left="10"
@@ -81,7 +81,7 @@ const Hero = () => {
           <img
             src={aura}
             alt="Aura Animation"
-            style={{ width: "120%", height: "120%" }}
+            style={{ width: "110%", height: "110%" }}
           />
         </Box>
         <Text fontSize="md" mt={4}>
@@ -96,7 +96,7 @@ const Hero = () => {
             <Icon boxSize={"7"} ml={1} as={GI.GiHammerSickle} />
           </Text>
           <Flex flexDirection={"row"}>
-          <Text fontSize={"xs"} mr={2}>
+            <Text fontSize={"xs"} mr={2}>
               HP.{" "}
             </Text>
             <Progress
@@ -108,9 +108,8 @@ const Hero = () => {
               value={HP}
               mb={2}
             ></Progress>
-            </Flex>
+          </Flex>
           <Flex flexDirection={"row"}>
-            
             <Text fontSize={"xs"} mr={2}>
               exp.{" "}
             </Text>
@@ -129,7 +128,9 @@ const Hero = () => {
           <Text fontSize={"xm"} mb={1}>
             {" "}
             <Icon boxSize={"6"} mb={-1} as={GI.GiPointySword} mr={1} ml={2} />
-            500 | <Icon boxSize={"6"} mb={-1} as={GI.GiBoltShield} /> 600
+            {HP >= 50 ? 1000 : 400} |{" "}
+            <Icon boxSize={"6"} mb={-1} as={GI.GiBoltShield} />{" "}
+            {HP >= 50 ? 800 : 500}
           </Text>
           <Icon boxSize={"4"} as={FA.FaRulerVertical} ml={2} mr={3} />{" "}
           <Text as="b" fontSize={14}>
@@ -141,13 +142,20 @@ const Hero = () => {
             74kg
           </Text>
           <br />
-          <Tag variant={"subtle"} colorScheme="orange" borderRadius="full" mt={1} ml={3} mr={2}>
+          <Tag
+            variant={"subtle"}
+            colorScheme="orange"
+            borderRadius="full"
+            mt={1}
+            ml={3}
+            mr={2}
+          >
             Terra
             <Icon boxSize={"16px"} ml={1} as={TB.TbZodiacCapricorn} />
           </Tag>
-          <Tag  mt={1} borderRadius="full" colorScheme="blue">
+          <Tag mt={1} borderRadius="full" colorScheme="blue">
             Água
-            <Icon  boxSize={"14px"} ml={1} as={TB.TbZodiacPisces} />
+            <Icon boxSize={"14px"} ml={1} as={TB.TbZodiacPisces} />
           </Tag>
           <br />
         </Text>
