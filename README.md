@@ -1,70 +1,82 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Benny Card
 
-In the project directory, you can run:
 
-### `npm start`
+Esta é uma aplicação desenvolvida em React com o uso da biblioteca Chakra UI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A aplicação permite que você crie um card personalizado para compartilhar suas informações, como HP (Health Points), EXP (Experiência), altura, peso e um pouco da sua história de forma humorística.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Demonstração
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Veja a aplicação em ação: [Link Tree App](https://link-tree-iota.vercel.app/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Recursos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Criação de um card personalizado com informações personalizadas.
+- Contador de HP que diminui ao longo do dia.
+- Exibição da porcentagem de EXP do ano que já se passou.
+- Subida de nível no dia do aniversário.
+- Diminuição de ataque e defesa à medida que o dia chega ao fim.
 
-### `npm run eject`
+## Pré-requisitos
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js (versão X.X.X)
+- NPM (versão X.X.X) ou Yarn (versão X.X.X)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instalação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone o repositório:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+git clone https://github.com/berdfandrade/link_tree.git
 
-## Learn More
+```
+2. Navegue até o diretório do projeto:
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+cd link_tree
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+3. Instale as dependências:
+```
 
-### Code Splitting
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+ou
+```
 
-### Analyzing the Bundle Size
+yarn install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+## Uso
 
-### Making a Progressive Web App
+1. Inicie a aplicação localmente:
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm start
 
-### Advanced Configuration
+```
+ou
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+yarn start
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Acesse a aplicação no seu navegador em `http://localhost:3000`.
 
-### `npm run build` fails to minify
+## Personalização
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Para personalizar as informações exibidas no card, edite o arquivo `src/data/profile.js`.
+- Para personalizar o estilo da aplicação, consulte a documentação do Chakra UI em [https://chakra-ui.com/](https://chakra-ui.com/) para obter informações sobre a personalização dos componentes.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você encontrar algum problema ou tiver alguma sugestão, abra uma issue ou envie um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
