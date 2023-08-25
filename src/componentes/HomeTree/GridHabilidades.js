@@ -4,14 +4,12 @@ import * as BI from "react-icons/bi";
 import {
   Grid,
   Flex,
-  Box,
   Progress,
   Icon,
   Text,
   Center,
 } from "@chakra-ui/react";
 
-import anime from "animejs";
 
 function IconHabilidade({ icone, nome, progresso, descricao, cor }) {
   return (
@@ -57,8 +55,20 @@ function GridHabilidades() {
         <IconHabilidade
           nome={"Amor"}
           icone={GI.GiHeartBattery}
-          progresso={5}
-          descricao={"Habilidades amorosas"}
+          progresso={15}
+          descricao={"Sorte no amor"}
+        />
+          <IconHabilidade
+          nome={"Felicidade"}
+          icone={GI.GiSunflower}
+          progresso={85}
+          descricao={"Nível de felicidade"}
+        />
+          <IconHabilidade
+          nome={"Conselhos"}
+          icone={GI.GiFiles}
+          progresso={80}
+          descricao={"Capacidade para dar conselhos"}
         />
         <IconHabilidade
           nome={"Social"}
@@ -151,6 +161,7 @@ function GridHabilidades() {
           progresso={70}
           descricao={"Conhecimento sobre música"}
         />
+ 
         <IconHabilidade
           nome={"Futebol"}
           icone={GI.GiSoccerBall}
