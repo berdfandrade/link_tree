@@ -7,6 +7,9 @@ Esta é uma aplicação desenvolvida em React com o uso da biblioteca Chakra UI.
 
 A aplicação permite que você crie um card personalizado para compartilhar suas informações, como HP (Health Points), EXP (Experiência), altura, peso e um pouco da sua história de forma humorística.
 
+![35shots_so](https://github.com/berdfandrade/link_tree/assets/96706881/c8f62fd0-525a-473f-be5a-218958af96de)
+
+
 # Demonstração
 
 
@@ -30,42 +33,36 @@ Veja a aplicação em ação: [Link Tree App](https://link-tree-iota.vercel.app/
 ## Instalação
 
 1. Clone o repositório:
-
-git clone https://github.com/berdfandrade/link_tree.git
-
 ```
+git clone https://github.com/berdfandrade/link_tree.git
+```
+
 2. Navegue até o diretório do projeto:
 ```
-
 cd link_tree
-
 ```
+
 3. Instale as dependências:
 ```
-
 npm install
-
 ```
 ou
-```
 
+```
 yarn install
-
 ```
+
 ## Uso
 
 1. Inicie a aplicação localmente:
+
 ```
-
 npm start
-
 ```
 ou
 ```
-
 yarn start
-
-
+```
 2. Acesse a aplicação no seu navegador em `http://localhost:3000`.
 
 ## Personalização
