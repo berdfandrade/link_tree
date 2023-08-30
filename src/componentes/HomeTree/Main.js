@@ -78,7 +78,7 @@ function Main() {
           <h2>
             <AccordionButton>
               <Box as="b" fontSize={20} flex="1" textAlign="left">
-                <Icon as={GI.GiStarsStack} boxSize={5} mr={2}></Icon>Tipo
+                <Icon as={GI.GiStarsStack} boxSize={5} mr={2}></Icon>Astros
               </Box>
               <AccordionIcon />
             </AccordionButton>
